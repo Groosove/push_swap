@@ -6,12 +6,18 @@
 /*   By: flavon <flavon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 18:18:01 by flavon            #+#    #+#             */
-/*   Updated: 2021/03/17 18:23:14 by flavon           ###   ########.fr       */
+/*   Updated: 2021/03/17 21:30:22 by flavon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_pa();
+void	ft_pa(void)
+{
+	return ;
+}
 
-void ft_pb();
+void	ft_pb(void)
+{
+	return ;
+}

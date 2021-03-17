@@ -6,7 +6,7 @@
 /*   By: flavon <flavon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 18:12:13 by flavon            #+#    #+#             */
-/*   Updated: 2021/03/17 21:13:17 by flavon           ###   ########.fr       */
+/*   Updated: 2021/03/17 21:31:12 by flavon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int		ft_isdigit(int c)
 	return (c >= 48 && c <= 57);
 }
 
-int check_value(char *dst) {
+int		check_value(char *dst)
+{
 	int i;
 
 	i = 0;

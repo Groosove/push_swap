@@ -6,11 +6,12 @@
 /*   By: flavon <flavon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 18:21:11 by flavon            #+#    #+#             */
-/*   Updated: 2021/03/16 18:30:01 by flavon           ###   ########.fr       */
+/*   Updated: 2021/03/17 21:15:35 by flavon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "stdio.h"
 
 t_data	*init() {
 	t_data *data;
@@ -22,9 +23,25 @@ t_data	*init() {
 	}
 	return (data);
 }
+
 int main(int argc, char **argv) { 
 	t_data *data;
-
 	
+	int i = 0;
+	int j = 0;
+	data = init();
+	if (data) {
+		while (++i != argc) {
+			if (!check_value(argv[i])) {
+				write(1, "Error\n", 6);
+				break ;
+			}
+			push_front(&data->a, ft_atoi(argv[i]));
+		}
+	}
+	while (data->a) {
+		printf("%d\n", data->a->value);
+		data->a = data->a->next;
+	}
 	return (0);
 }

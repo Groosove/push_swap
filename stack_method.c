@@ -6,13 +6,13 @@
 /*   By: flavon <flavon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 18:08:11 by flavon            #+#    #+#             */
-/*   Updated: 2021/03/17 20:54:32 by flavon           ###   ########.fr       */
+/*   Updated: 2021/03/17 22:22:55 by flavon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_lstlast(t_stack *lst)
+t_stack		*ft_lstlast(t_stack *lst)
 {
 	if (lst != 0)
 	{
@@ -23,7 +23,7 @@ t_stack	*ft_lstlast(t_stack *lst)
 	return (0);
 }
 
-t_stack	*ft_lstnew(int content)
+t_stack		*ft_lstnew(int content)
 {
 	t_stack *list;
 
@@ -35,7 +35,8 @@ t_stack	*ft_lstnew(int content)
 	return (list);
 }
 
-void push_back(t_stack **begin, int value) {
+void		push_back(t_stack **begin, int value)
+{
 	t_stack *insert_node;
 
 	if (*begin != 0)
@@ -47,10 +48,11 @@ void push_back(t_stack **begin, int value) {
 	*begin = ft_lstnew(value);
 }
 
-void	push_front(t_stack **lst, int value)
+void		push_front(t_stack **lst, int value)
 {
-	t_stack *new = ft_lstnew(value);
-	
+	t_stack *new;
+
+	new = ft_lstnew(value);
 	if (lst == 0)
 		*lst = new;
 	if (new != 0)

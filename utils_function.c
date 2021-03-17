@@ -6,7 +6,7 @@
 /*   By: flavon <flavon@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 18:12:13 by flavon            #+#    #+#             */
-/*   Updated: 2021/03/17 21:31:12 by flavon           ###   ########.fr       */
+/*   Updated: 2021/03/17 22:26:46 by flavon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,15 @@ int		check_value(char *dst)
 		else
 			return (0);
 	return (1);
+}
+
+int		is_unsorted(t_stack *stack)
+{
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (1);
+		stack = stack->next;
+	}
+	return (0);
 }
